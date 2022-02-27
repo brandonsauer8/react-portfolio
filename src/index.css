@@ -11,6 +11,7 @@ body {
   background: orange;
 }
 
+
 div.nav-head {
   margin-bottom: 32px;
 }
@@ -31,6 +32,4 @@ main {
   width: 350px;
 }
 
-.label { 
-  text-align: left;
-}
+

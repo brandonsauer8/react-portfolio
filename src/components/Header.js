@@ -22,7 +22,7 @@ function Header() {
 
   return (
     <div>
-      <nav className="nav">
+      <nav className="nav content is-large has-text-weight-bold">
         <div className="nav-head">
           <a
             className="nav-item"
