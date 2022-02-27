@@ -30,3 +30,7 @@ main {
 .profile-picture {
   width: 350px;
 }
+
+.label { 
+  text-align: left;
+}

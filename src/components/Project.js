@@ -1,168 +1,35 @@
 import React from "react";
 
-function Project() {
+function Project(props) {
   return (
     <div>
-      <div className="columns">
-        <div class="card" className="column is-one-third">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img
-                src="https://bulma.io/images/placeholders/1280x960.png"
-                alt="Placeholder image"
-              />
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="media">
-              <div class="media-left"></div>
-              <div class="media-content">
-                <p class="title is-4">John Smith</p>
+      <div className="columns is-desktop is-justify-content-center is-flex-wrap-wrap is-flex-direction-row">
+        {props.projects.map((project) => (
+          <div className="column">
+            <div className="card">
+              <div className="card-image">
+                <figure className="">
+                  <a href={project.live}>
+                    <img src={process.env.PUBLIC_URL + project.image} alt="project alt" />
+                  </a>
+                </figure>
+              </div>
+              <div className="card-content">
+                <div className="media">
+                  <div className="media-content">
+                    <p className="title is-5" key={project.id}>
+                      {project.title}
+                    </p>
+                  </div>
+                </div>
+
+                <div>
+                  {project.description}
+                </div>
               </div>
             </div>
-
-            <div class="content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              nec iaculis mauris. <a>@bulmaio</a>.<a href="#">#css</a>{" "}
-              <a href="#">#responsive</a>
-              <br />
-            </div>
           </div>
-        </div>
-
-        <div class="card" className="column is-one-third">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img
-                src="https://bulma.io/images/placeholders/1280x960.png"
-                alt="Placeholder image"
-              />
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="media">
-              <div class="media-left"></div>
-              <div class="media-content">
-                <p class="title is-4">John Smith</p>
-              </div>
-            </div>
-
-            <div class="content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              nec iaculis mauris. <a>@bulmaio</a>.<a href="#">#css</a>{" "}
-              <a href="#">#responsive</a>
-              <br />
-            </div>
-          </div>
-        </div>
-
-        <div class="card" className="column is-one-third">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img
-                src="https://bulma.io/images/placeholders/1280x960.png"
-                alt="Placeholder image"
-              />
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="media">
-              <div class="media-left"></div>
-              <div class="media-content">
-                <p class="title is-4">John Smith</p>
-              </div>
-            </div>
-
-            <div class="content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              nec iaculis mauris. <a>@bulmaio</a>.<a href="#">#css</a>{" "}
-              <a href="#">#responsive</a>
-              <br />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="columns">
-        <div class="card" className="column is-one-third">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img
-                src="https://bulma.io/images/placeholders/1280x960.png"
-                alt="Placeholder image"
-              />
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="media">
-              <div class="media-left"></div>
-              <div class="media-content">
-                <p class="title is-4">John Smith</p>
-              </div>
-            </div>
-
-            <div class="content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              nec iaculis mauris. <a>@bulmaio</a>.<a href="#">#css</a>{" "}
-              <a href="#">#responsive</a>
-              <br />
-            </div>
-          </div>
-        </div>
-
-
-
-        <div class="card" className="column is-one-third">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img
-                src="https://bulma.io/images/placeholders/1280x960.png"
-                alt="Placeholder image"
-              />
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="media">
-              <div class="media-left"></div>
-              <div class="media-content">
-                <p class="title is-4">John Smith</p>
-              </div>
-            </div>
-
-            <div class="content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              nec iaculis mauris. <a>@bulmaio</a>.<a href="#">#css</a>{" "}
-              <a href="#">#responsive</a>
-              <br />
-            </div>
-          </div>
-        </div>
-
-        <div class="card" className="column is-one-third">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img
-                src="https://bulma.io/images/placeholders/1280x960.png"
-                alt="Placeholder image"
-              />
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="media">
-              <div class="media-left"></div>
-              <div class="media-content">
-                <p class="title is-4">John Smith</p>
-              </div>
-            </div>
-
-            <div class="content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              nec iaculis mauris. <a>@bulmaio</a>.<a href="#">#css</a>{" "}
-              <a href="#">#responsive</a>
-              <br />
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
