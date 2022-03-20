@@ -38,6 +38,15 @@ const projects = [
     repo: "https://github.com/brandonsauer8/coding-quiz",
     live: "https://brandonsauer8.github.io/coding-quiz/",
   },
+  {
+    title: "Whiskey Business",
+    languages: "react, chakra, css, javascript",
+    image: "img/homepage-screenshot.jpg",
+    description:
+      "You can use the website to search cocktail recipies. Create an account to save and share your favorite recipes with other individuals online.",
+    repo: "https://github.com/EricKenji/whiskey-business",
+    live: "https://arcane-shelf-84573.herokuapp.com/",
+  },
 ];
 
 function Portfolio() {
